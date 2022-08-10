@@ -26,9 +26,13 @@ messageForm.item(0).addEventListener('submit', (event) => {
     const email = event.target.email.value;
     const message = event.target.message.value;
 
+    console.log(name);
+    console.log(email);
+    console.log(message);
+
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
-    newMessage.innerHTML = `<a href="mailto: ${email}">${name}</a> wrote: <span>${message}</span>`;
+    newMessage.innerHTML = `<a href="mailto:${email}">${name}</a> wrote: <span>${message}</span>`;
     
     const removeButton = document.createElement('button');
     removeButton.innerText = 'remove';
@@ -38,13 +42,29 @@ messageForm.item(0).addEventListener('submit', (event) => {
         entry.remove();
     });
 
-    messageList.appendChild(newMessage);
     newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
     messageSection.hidden = false;
     messageForm.item(0).reset();
-
-   
 });
 
 //const title = document.querySelector('h1');
 //title.style.color = '#ADD8E6';
+
+function toggleDarkMode() {
+    var bodyElement = document.getElementById('main-background')
+    var darkModeBtn = document.getElementById('dark-mode-btn')
+
+    if (bodyElement.style.background == "black") {
+        bodyElement.style.background = "white"
+        darkModeBtn.innerHTML = "Change to Dark Mode"
+        bodyElement.style.color = "black"
+
+    } else {
+        bodyElement.style.background = "black"
+        bodyElement.style.color = "white"
+        darkModeBtn.innerHTML = "Change to Light Mode"
+    }
+
+
+}
