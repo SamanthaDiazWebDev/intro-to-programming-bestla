@@ -1,28 +1,28 @@
-body {
-    background-color: white;
-    color: black;
-    opacity: 0.8;
-    text-align: center;
-    font-family: Arial, "Times New Roman", serif;
-    margin: 4%;
+* {
+    box-sizing: border-box;
 }
 
 h1 {
     display: inline-block;
     text-align: center;
     font-size: 3rem;
+    font-weight: 700;
 }
 
 
 .image {
     border-style: double;
-    display: inline-block;
-    align-content: center;
+    width: 25%;
 }
 
 header {
+    position: sticky;
+    top: 0;
+    left: auto;
+    width: auto;
     text-align: center;
-	padding: 15px;
+	padding: 5px;
+    background-color: rosybrown;
 }
 
 header p {
@@ -42,46 +42,67 @@ nav li{
 	background: #FFFFFF;
 }
 
+body {
+    background-color: white;
+    color: black;
+    opacity: 0.8;
+    text-align: center;
+    font-family: Arial, "Times New Roman", serif;
+    margin: 4%;
+}
+
 h2 {
     text-align: center;
     border-style: double;
     font-size: 2rem;
+    font-weight: 650;
 }
 
 ul {
     text-align: center;
     list-style-position: inside;
     list-style-type: disc;
+    padding: 0px;
 }
-.experience:not(:last-child) {
+
+.experienceSection:not(:last-child) {
     margin-bottom: 1rem;
 }
 
-.experience {
+.experienceSection {
     background-color: rosybrown;
     border-radius: double;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     padding: 0.85rem;
 }
 
-/* Trying to edit the skills section
+/* Trying to edit the skills section */
 
-.skills {
+#skills {
     text-align: center;
-	padding: 15px;
+	padding: 1 rem;
 	font-variant: small-caps;
 	font-size:  150%;
 	font-family: Arial, "Times New Roman", serif;
     width: 22%;
-	display: inline-block;
-}*/
+	display: inline;
+}
 
-.connections:not(:last-child) {
+.skillSection {
+    background-color: rosybrown;
+    border-radius: double;
+    display: inline-block;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.connectionsSection:not(:last-child) {
     margin-bottom: 1rem;
 }
 
-.connections {
+.connectionsSection {
     background-color: rosybrown;
     border-radius: double;
     display: inline-block;
@@ -90,7 +111,7 @@ ul {
 }
 
 section {
-    padding-top: 50px;
+    padding-top: 20px;
     margin-left: 30px;
     margin-right: 30px;
   }
@@ -101,6 +122,7 @@ section {
     margin-bottom: 1rem;
     max-width: 100%;
     margin-right: 1rem;
+    padding: 10px;
 }
 
 .field_label {
@@ -111,17 +133,37 @@ section {
     font-size: 1rem;
 }
 
+.footer {
+    width: 200px;
+    padding: 4px;
+    border: 2px solid rosybrown;
+    margin: 30px auto 15px;
+    color: black;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {...}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {...}
-
+@media only screen and (max-width: 600px) {
+    .image {
+        float: center;
+        width: 250px;
+        margin: 0 1rem 1rem 0;
+    }
+}
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {...}
-
+@media only screen and (min-width: 768px) {
+    .image {
+        float: center;
+        width: 350px;
+        margin: 0 1rem 1rem 0;
+    }
+}
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
+@media only screen and (min-width: 992px) {
+    .image {
+        float: center;
+        width: 400px;
+        margin: 0 1rem 1rem 0;
+    }
+}
