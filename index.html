@@ -6,79 +6,87 @@
         <meta name="description" content="Portfolio">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
+        <link rel="stylesheet" href="css/index.css">
     </head>
-    <body>
+    <body id="main-background">
+        <button id="dark-mode-btn" onclick="toggleDarkMode()">Change to Dark Mode</button>
         <header>
-            <h1>Who Am I? <em>Samantha Marie Diaz</em></h1>
-            <p>Get to know more about me and my experiences!</p>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#connect">Connect</a></li>
-                </ul>
+            <br>
+            <h1>Samantha Marie Diaz</h1>
+            <nav> 
+                |
+                <a href="#">Home</a> |
+                <a href="#about">About</a> |
+                <a href="#experience">Experience</a> |
+                <a href="#skills">Skills</a> |
+                <a href="#connect">Connect</a> |
             </nav>
         </header>
 
         <section id="about">
             <h2><strong>About</strong></h2>
-            <p>Hello World! I'm 22 years old and I live in Brooklyn, New York. I'm currently an intern at ELF working as a QA Automation Tester. I'm also in school at Code the Dream to become a Software Developer. I'm well-versed in HTML, CSS, and Javscript. I'm hoping learn more coding languages within the near future!</p>
+            <details open> 
+                <summary> Learn More </summary> 
+                <img class="image" width="100px" src="MePic2.jpg" role="presentation">
+                <p class="connections">Hello World! I'm 22 years old and I live in Brooklyn, New York. I'm currently an intern at ELF working as a QA Automation Tester. I'm also in school at Code the Dream to become a Software Developer. I'm well-versed in HTML, CSS, and Javascript. I'm hoping learn more coding languages within the near future!</p>
+            </details>
         </section>
 
         <section id="experience">
             <h2><strong>Experience</strong></h2>
             <ul>
-                <li>ELF - Ecommerce Intern (6 Months)</li> 
-                <li>ELF - QA Automation Tester Intern (6 Months)</li> 
-                <li>Girls Who Code - Worked on multiple projects</li> 
+                <li class="experience">ELF - Ecommerce Intern (6 Months)</li> 
+                <li class="experience">ELF - QA Automation Tester Intern (6 Months)</li> 
+                <li class="experience">Girls Who Code - Worked on multiple projects (4 Months)</li> 
             </ul>
         </section>
 
         <section id="skills">
             <h2><strong>Skills</strong></h2>
-            <ul>
-
+            <ul class="skills">
             </ul>
         </section>
         
         <section id="connect">
             <h2><strong>Connect</strong></h2>
             <ul>
-                <li><a href="mailto:samantha.diaz1019@gmail.com">Email</a></li>
-                <li><a href="https://twitter.com/SamanthaD1019">Twitter</a></li>
-                <li><a href="https://www.linkedin.com/in/samantha-diaz-5716ba1ab/">LinkedIn</a></li>
-                <li><a href="https://github.com/SamanthaDiazWebDev">Github</a></li>
+                <li class="connections"><a href="mailto:samantha.diaz1019@gmail.com">Email</a></li>
+                <li class="connections"><a href="https://twitter.com/SamanthaD1019">Twitter</a></li>
+                <li class="connections"><a href="https://www.linkedin.com/in/samantha-diaz-5716ba1ab/">LinkedIn</a></li>
+                <li class="connections"><a href="https://github.com/SamanthaDiazWebDev">Github</a></li>
             </ul> 
         </section>
 
         <section>
             <h2>Leave A Message</h2>
             <form name="leave_message">
-                <label for="name">Name</label><br>
-                <input type="text" name="name" required="true"><br>
+                <div class="field">
+                    <label class="field_label" for="name">Name</label><br>
+                    <input type="text" name="name" required="true"><br>
+                </div>
 
-                <label for="email">Email</label><br>
-                <input type="email" name="email" required="true"><br>
+                <div class="field">
+                    <label class="field_label" for="email">Email</label><br>
+                    <input type="email" name="email" required="true"><br>
+                </div> <br>
 
-                <label for="message">Message</label><br>
-                <textarea name="message" required="true">
-
-                </textarea><br>
-                <button type="submit">Submit</button>
+                <div class="field">
+                    <label class="field_label" for="message">Message</label><br>
+                    <textarea name="message" required="true">
+                    </textarea><br>
+                </div>
+                <br><button type="submit">Submit</button>
             </form>
         </section>
 
         <section id="messages">
             <h2>Messages</h2>
-            <ul>
-
+            <ul class="connections">
             </ul>
         </section>
             
-        <footer>
-            
+        <br>
+        <footer class="experience">
         </footer>
         <script src="js/index.js"></script>
     </body>
