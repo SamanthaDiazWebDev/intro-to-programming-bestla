@@ -68,3 +68,24 @@ function toggleDarkMode() {
 
 
 }
+
+const githubRequest = new XMLHttpRequest();
+githubRequest.open('GET', 'https://api.github.com/users/SamanthaDiazWebDev/repos');
+githubRequest.send();
+githubRequest.onreadystatechange = function () {
+    if (githubRequest.readystate === 4) {
+        var repositories = JSON.parse(githubRequest.responseText);
+        console.log(repositories);
+        var projectSection = document.getElementById("projects");
+        var projectList = projectSection.querySelector("ul");
+        for (let i=0; i < repositories.length; i++) {
+            var project = document.createElement('li');
+            var repositoryLink = document.createElement('a');
+            repositoryLink.href = repositories[i].html_url;
+            repositoryLink.innerHTML = repositories[i].name;
+            projectList.appendChild(project);
+            project.appendChild(repositoryLink);
+        }
+
+    }
+};
