@@ -69,7 +69,7 @@ function toggleDarkMode() {
 
 }
 
-const githubRequest = new XMLHttpRequest();
+/* const githubRequest = new XMLHttpRequest();
 githubRequest.open('GET', 'https://api.github.com/users/SamanthaDiazWebDev/repos');
 githubRequest.send();
 githubRequest.onreadystatechange = function () {
@@ -88,4 +88,22 @@ githubRequest.onreadystatechange = function () {
         }
 
     }
-};
+}; */
+
+fetch('https://api.github.com/users/SamanthaDiazWebDev/repos')
+    .then (response => response.json())
+    .catch(error => console.log('Looks like there was a problem', error))
+    .then (data => {
+        console.log(data)
+        const projectSection=document.getElementById("projects");
+        const projectList = projectSection.querySelector ("ul");
+        for (let i=0; i<data.length; i++) {
+            const project= document.createElement ('li');
+            const repoLink=document.createElement('a');
+            repoLink.href=data[i].html_url;
+            repoLink.innerHTML = data[i].name;
+            projectList.appendChild(project);
+            project.appendChild(repoLink);
+
+        }
+    })
