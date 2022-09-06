@@ -98,6 +98,16 @@ ul {
     padding: 1rem;
 }
 
+#projects {
+    text-align: center;
+	padding: 1 rem;
+	font-variant: small-caps;
+	font-size:  150%;
+	font-family: Arial, "Times New Roman", serif;
+    width: 22%;
+	display: inline;
+}
+
 .connectionsSection:not(:last-child) {
     margin-bottom: 1rem;
 }
