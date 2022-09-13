@@ -67,7 +67,7 @@ function toggleDarkMode() {
     }
 
 
-}
+};
 
 /* const githubRequest = new XMLHttpRequest();
 githubRequest.open('GET', 'https://api.github.com/users/SamanthaDiazWebDev/repos');
@@ -92,7 +92,7 @@ githubRequest.onreadystatechange = function () {
 
 fetch('https://api.github.com/users/SamanthaDiazWebDev/repos')
     .then (response => response.json())
-    .catch(error => console.log('Looks like there was a problem', error))
+    .catch(error => alert(error.message))
     .then (data => {
         console.log(data)
         const projectSection=document.getElementById("projects");
